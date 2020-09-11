@@ -22,6 +22,11 @@ m1_logit <- glm(Class ~ job_demands + workload + job_control + consis_interest +
                 family = binomial(link = "logit"),
                 data = d2)
 
+m1_multinom <- nnet::multinom(Class ~ job_demands + workload + job_control + consis_interest + pers_effort,
+                data = d2)
+
+summary(m1_multinom)
+
 #------------------------ DIAGNOSTICS & ASSUMPTIONS ----------------
 
 # Check outliers

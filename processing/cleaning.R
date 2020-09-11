@@ -21,7 +21,7 @@ d1 <- d %>%
          pers_effort = pe1 + pe2 + pe3 + pe4,
          job_demands = jd1 + jd2 + jd3 + jd4,
          workload = qwi1 + qwi2 + qwi3 + qwi4 + qwi5,
-         job_control = jc1, jc2, jc3, jc4, jc5, jc6, jc7, jc8, jc9, jc10,
+         job_control = jc1 + jc2 + jc3 + jc4 + jc5 + jc6 + jc7 + jc8 + jc9 + jc10,
          engagement_vigour = vig1 + vig2 + vig3,
          engagement_dedication = ded1 + ded2 + ded3,
          engagement_absorption = abs1 + abs2 + abs3,

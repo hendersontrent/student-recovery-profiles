@@ -37,9 +37,3 @@ logit_output_generator <- function(x){
       TRUE            ~ "Non-significant"))
   
 }
-
-if (!exists(keepers)) {
-  keepers <- c("keepers", "logit_output_generator")
-} else {
-  keepers <- union(keepers, "logit_output_generator")
-}
