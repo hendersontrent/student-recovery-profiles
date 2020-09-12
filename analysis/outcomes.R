@@ -33,5 +33,5 @@ adj_pval <- 0.05 / 10 # Bonferroni correction for inflated error rate due to 10 
 
 # Output tables
 
-tab_model(out_m1, out_m2, out_m3, out_m4, out_m5, p.style = "stars", p.threshold = adj_pval)
-tab_model(out_m6, out_m7, out_m8, out_m9, out_m10, p.style = "stars", p.threshold = adj_pval)
+tab_model(out_m1, out_m2, out_m3, out_m4, out_m5, p.style = "stars", p.threshold = c(adj_pval, .001, .0001))
+tab_model(out_m6, out_m7, out_m8, out_m9, out_m10, p.style = "stars", p.threshold = c(adj_pval, .001, .0001))

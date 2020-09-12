@@ -25,7 +25,7 @@ m1 <- d2[1:nrow(d2), ] %>%
 #-----------------
 
 m1 %>%
-  compare_solutions(statistics = c("AIC", "BIC"))
+  compare_solutions(statistics = c("AIC", "BIC", "AWE", "CLC", "KIC"))
 
 #-----------------
 # DEFAULT LPA PLOT
