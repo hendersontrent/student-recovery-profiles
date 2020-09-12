@@ -10,6 +10,10 @@
 # Author: Trent Henderson, 11 September 2020
 #-------------------------------------------
 
+# Load LPA outputs
+
+source("analysis/lpa.R")
+
 #------------------------ MODELLING --------------------------------
 
 out_m1 <- lm(engagement_vigour ~ Class + gender + age + employhrs, data = d3)

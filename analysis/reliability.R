@@ -12,7 +12,7 @@
 
 #------------------- JOB DEMANDS -----------------------------------
 
-demands <- d %>%
+demands <- d1 %>%
   dplyr::select(c(jd1, jd2, jd3, jd4))
 
 m <- alpha(demands)
@@ -21,7 +21,7 @@ demands_alpha <- data.frame(construct = "Job Demands",
 
 #------------------- WORKLOAD -----------------------------------
 
-workload <- d %>%
+workload <- d1 %>%
   dplyr::select(c(qwi1, qwi2, qwi3, qwi4, qwi5))
 
 m1 <- alpha(workload)
@@ -30,7 +30,7 @@ workload_alpha <- data.frame(construct = "Workload",
 
 #------------------- JOB CONTROL -----------------------------------
 
-job_control <- d %>%
+job_control <- d1 %>%
   dplyr::select(c(jc1, jc2, jc3, jc4, jc5, jc6, jc7, jc8, jc9, jc10))
 
 m2 <- alpha(job_control)
@@ -39,7 +39,7 @@ job_control_alpha <- data.frame(construct = "Job Control",
 
 #------------------- CONSISTENCY OF INTEREST -----------------------
 
-consis_int <- d %>%
+consis_int <- d1 %>%
   dplyr::select(c(ci1, ci2, ci3, ci4))
 
 m3 <- alpha(consis_int) # DOUBLE CHECK REVERSE SCORING HERE!!!
@@ -48,7 +48,7 @@ consis_alpha <- data.frame(construct = "Consistency of Interest",
 
 #------------------- PERSISTENCY OF EFFORT -------------------------
 
-persis_effort <- d %>%
+persis_effort <- d1 %>%
   dplyr::select(c(pe1, pe2, pe3, pe4))
 
 m4 <- alpha(persis_effort) # DOUBLE CHECK REVERSE SCORING HERE!!!
@@ -57,7 +57,7 @@ persis_alpha <- data.frame(construct = "Persistency of Effort",
 
 #------------------- DETACHMENT ------------------------------------
 
-detachment <- d %>%
+detachment <- d1 %>%
   dplyr::select(c(d1, d2, d3, d4))
 
 m5 <- alpha(detachment)
@@ -66,7 +66,7 @@ detach_alpha <- data.frame(construct = "Detachment",
 
 #------------------- RELAXATION ------------------------------------
 
-relaxation <- d %>%
+relaxation <- d1 %>%
   dplyr::select(c(r1, r2, r3, r4))
 
 m6 <- alpha(relaxation)
@@ -75,7 +75,7 @@ relax_alpha <- data.frame(construct = "Relaxation",
 
 #------------------- MASTERY ---------------------------------------
 
-mastery <- d %>%
+mastery <- d1 %>%
   dplyr::select(c(m1, m2, m3, m4))
 
 m7 <- alpha(mastery)
@@ -84,7 +84,7 @@ mastery_alpha <- data.frame(construct = "Mastery",
 
 #------------------- CONTROL ---------------------------------------
 
-control <- d %>%
+control <- d1 %>%
   dplyr::select(c(c1, c2, c3, c4))
 
 m8 <- alpha(control)

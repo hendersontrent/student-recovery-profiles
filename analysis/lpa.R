@@ -11,7 +11,7 @@
 
 #------------------------- MODEL SPECIFICATION ---------------------
 
-m1 <- d1[1:nrow(d1), ] %>%
+m1 <- d2[1:nrow(d2), ] %>%
   select(detachment, relaxation, mastery, control) %>%
   single_imputation() %>%
   estimate_profiles(1:6,
@@ -59,7 +59,7 @@ lpa_outputs_filt <- lpa_outputs %>%
 
 # Join back in to main dataset
 
-d2 <- d1 %>%
+d3 <- d2 %>%
   inner_join(lpa_outputs_filt, by = c("detachment" = "detachment", "relaxation" = "relaxation",
                                       "mastery" = "mastery", "control" = "control")) %>%
   filter(Probability > 0.8) %>%
@@ -70,7 +70,7 @@ d2 <- d1 %>%
 # ANALYSIS OF CLASSES
 #------------------------
 
-class_desc <- d2 %>%
+class_desc <- d3 %>%
   dplyr::select(c(detachment, relaxation, mastery, control, Class)) %>%
   gather(key = metric, value = value, 1:4) %>%
   mutate(metric = str_to_title(metric))
