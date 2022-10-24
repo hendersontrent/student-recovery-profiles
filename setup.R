@@ -9,17 +9,17 @@
 
 # Load packages
 
-library(tidyverse)
+library(dplyr)
+library(magrittr)
+library(tidyr)
+library(stringr)
+library(ggplot2)
+library(scales)
 library(data.table)
 library(readxl)
 library(janitor)
 library(tidyLPA)
-library(Cairo)
 library(broom)
-library(sjPlot)
-library(caTools)
-library(e1071)
-library(psych)
 
 # Turn off scientific notation
 
