@@ -5,6 +5,7 @@
 .Rproj
 
 data/*.xlsx
+data/*.csv
 *.pdf
 *.png
 *.pptx
