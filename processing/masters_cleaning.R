@@ -1,52 +1,50 @@
-#-------------------------------------------
+#-----------------------------------------
 # This script aims to prep the data ready
 # for analysis
 #
 # NOTE: This script requires setup.R to
 # have been run first
-#-------------------------------------------
+#-----------------------------------------
 
-#-------------------------------------------
-# Author: Trent Henderson, 11 September 2020
-#-------------------------------------------
+#-----------------------------------------
+# Author: Trent Henderson, 24 October 2022
+#-----------------------------------------
 
 #------------------------ PREP DATA --------------------------------
 
-d1 <- d %>%
+old_data <- old_data %>%
   mutate(ci1 = case_when(
-         ci1 == 1 ~ 5,
-         ci1 == 2 ~ 4,
-         ci1 == 3 ~ 3,
-         ci1 == 4 ~ 2,
-         ci1 == 5 ~ 1,
-         TRUE    ~ 999)) %>%
+    ci1 == 1 ~ 5,
+    ci1 == 2 ~ 4,
+    ci1 == 3 ~ 3,
+    ci1 == 4 ~ 2,
+    ci1 == 5 ~ 1,
+    TRUE    ~ 999)) %>%
   mutate(ci2 = case_when(
-         ci2 == 1 ~ 5,
-         ci2 == 2 ~ 4,
-         ci2 == 3 ~ 3,
-         ci2 == 4 ~ 2,
-         ci2 == 5 ~ 1,
-         TRUE    ~ 999)) %>%
+    ci2 == 1 ~ 5,
+    ci2 == 2 ~ 4,
+    ci2 == 3 ~ 3,
+    ci2 == 4 ~ 2,
+    ci2 == 5 ~ 1,
+    TRUE    ~ 999)) %>%
   mutate(ci3 = case_when(
-         ci3 == 1 ~ 5,
-         ci3 == 2 ~ 4,
-         ci3 == 3 ~ 3,
-         ci3 == 4 ~ 2,
-         ci3 == 5 ~ 1,
-         TRUE    ~ 999)) %>%
+    ci3 == 1 ~ 5,
+    ci3 == 2 ~ 4,
+    ci3 == 3 ~ 3,
+    ci3 == 4 ~ 2,
+    ci3 == 5 ~ 1,
+    TRUE    ~ 999)) %>%
   mutate(pe4 = case_when(
-         pe4 == 1 ~ 5,
-         pe4 == 2 ~ 4,
-         pe4 == 3 ~ 3,
-         pe4 == 4 ~ 2,
-         pe4 == 5 ~ 1,
-         TRUE     ~ 999)) %>%
+    pe4 == 1 ~ 5,
+    pe4 == 2 ~ 4,
+    pe4 == 3 ~ 3,
+    pe4 == 4 ~ 2,
+    pe4 == 5 ~ 1,
+    TRUE     ~ 999)) %>%
   filter(ci1 != 999) %>%
   filter(ci2 != 999) %>%
   filter(ci3 != 999) %>%
-  filter(pe4 != 999)
-
-d2 <- d1 %>%
+  filter(pe4 != 999) %>%
   mutate(detachment = (d1 + d2 + d3 + d4)/4,
          relaxation = (r1 + r2 + r3 + r4)/4,
          mastery = (m1 + m2 + m3 + m4)/4,

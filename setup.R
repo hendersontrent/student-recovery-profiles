@@ -25,19 +25,21 @@ library(psych)
 
 options(scipen = 999)
 
-# Load logistic regression output function
+# Load in new data file
 
-source("R/logit_output_generator.R")
-source("R/stat_production.R")
+new_data <- read_excel("data/HDR Study 1_REQ only.xlsx") %>%
+  clean_names() %>%
+  rename(d1 = 14,
+         d2 = 18)
 
-# Load in excel file
+# Load in old data file
 
-d <- read_excel("data/JBlower.MOrgPsych.v1.0.xlsx") %>%
+old_data <- read_excel("data/JBlower.MOrgPsych.v1.0.xlsx") %>%
   clean_names()
 
 # Run preprocessing and cleaning
 
-source("processing/cleaning.R")
+source("processing/masters_cleaning.R")
 
 # Create an output folder if none exists:
 
