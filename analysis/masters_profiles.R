@@ -34,8 +34,10 @@ m1 %>%
 
 # Plot LPA
 
-m1 %>%
+all_models_plot <- m1 %>%
   plot_profiles()
+
+ggsave("output/all-models-masters.png", all_models_plot)
 
 #-----------------
 # FIT STATISTICS

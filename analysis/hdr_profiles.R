@@ -36,8 +36,10 @@ m1 %>%
 
 # Plot LPA
 
-m1 %>%
+all_models_plot <- m1 %>%
   plot_profiles()
+
+ggsave("output/all-models-hdr.png", all_models_plot)
 
 # Just fit the best one and plot it (we found this out through manual inspection of the fit indices code above)
 
@@ -48,8 +50,10 @@ m2 <- new_data[1:nrow(new_data), ] %>%
                     variances = "varying",
                     covariances = "varying")
 
-m2 %>%
+good_model_plot <- m2 %>%
   plot_profiles()
+
+ggsave("output/good-model-hdr.png", good_model_plot)
 
 #-----------------
 # FIT STATISTICS
@@ -121,4 +125,4 @@ p <- d2 %>%
   facet_wrap(~metric)
 
 print(p)
-ggsave("output/profile-distribution-plot-hdr.png")
+ggsave("output/profile-distribution-plot-hdr.png", p)
